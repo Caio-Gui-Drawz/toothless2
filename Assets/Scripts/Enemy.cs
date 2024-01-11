@@ -28,6 +28,11 @@ public class Enemy : MonoBehaviour
         health = healthMax;
     }
 
+    private void FixedUpdate()
+    {
+        aiPath.destination = Player.Position;
+    }
+
     // TESTING
     [ContextMenu("Test Movement")]
     private void TestMovement()

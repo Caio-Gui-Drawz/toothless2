@@ -6,7 +6,9 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    private static Player instance;
     public static int layer = 8;
+    public static Vector2 Position { get { return instance.rb.position; } }
 
     private bool IsDead { get { return health <= 0; } }
 
@@ -26,6 +28,9 @@ public class Player : MonoBehaviour
     // UNITY
     private void Awake()
     {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+
         rb = GetComponent<Rigidbody2D>();
 
         health = healthMax;
