@@ -5,34 +5,30 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static int layer = 9;
+
     [SerializeField] private float healthMax;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float moveAcceleration;
-    
-    [SerializeField] private Seeker seeker;
-    [SerializeField] private AIPath aiPath;
-
     private float health;
 
+    private Seeker seeker;
+    private AIPath aiPath;
+    
 
 
+    // UNITY
     private void Awake()
     {
-        health = healthMax;
+        seeker = GetComponent<Seeker>();
+        aiPath = GetComponent<AIPath>();
         aiPath.maxAcceleration = moveAcceleration;
         aiPath.maxSpeed = moveSpeed;
+
+        health = healthMax;
     }
 
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-
-    }
-
+    // TESTING
     [ContextMenu("Test Movement")]
     private void TestMovement()
     {

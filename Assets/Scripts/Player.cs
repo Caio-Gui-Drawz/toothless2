@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float healthMax;
+    public static int layer = 8;
+
+    private bool IsDead { get { return health <= 0; } }
+
+    [SerializeField] private int healthMax;
     [SerializeField] private float speedMax;
-    private float health;
+    [SerializeField] private float invulnerabilitySeconds;
+    private int health;
     private float speed;
+    private bool isInvulnerable;
     private Vector2 moveDirection;
 
     private Rigidbody2D rb;
@@ -32,7 +39,42 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (IsDead) return;
+
         Move();
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.layer == Enemy.layer)
+        {
+            TakeDamage();
+        }
+    }
+
+    // CLASS
+    public void TakeDamage()
+    {
+        if (isInvulnerable || IsDead) return;
+
+        Debug.Log("Player took damage!");
+        health -= 1;
+        if (health <= 0) Debug.Log("Player is dead!");
+        else StartCoroutine(TakeDamageInvulnerability());
+    }
+
+    private IEnumerator TakeDamageInvulnerability()
+    {
+        isInvulnerable = true;
+
+        float time = 0f;
+        while (time < invulnerabilitySeconds)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        isInvulnerable = false;
     }
 
     // INPUT
