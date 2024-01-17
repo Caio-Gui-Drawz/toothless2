@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
 
         Debug.Log("Player took damage!");
         health -= 1;
-        if (health <= 0) Debug.Log("Player is dead!");
+        if (health <= 0) Death();
         else StartCoroutine(TakeDamageInvulnerability());
     }
 
@@ -86,6 +86,14 @@ public class Player : MonoBehaviour
 
         sprite.enabled = true;
         isInvulnerable = false;
+    }
+
+    private void Death()
+    {
+        Debug.Log("Player is dead!");
+        health = 0;
+        sprite.enabled = false;
+        isInvulnerable = true;
     }
 
     // INPUT
