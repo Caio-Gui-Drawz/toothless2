@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private Vector2 moveDirection;
 
     private Rigidbody2D rb;
+    private SpriteRenderer sprite;
     private InputMap input;
 
 
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
         else Destroy(gameObject);
 
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
 
         health = healthMax;
         speed = speedMax;
@@ -70,15 +72,19 @@ public class Player : MonoBehaviour
 
     private IEnumerator TakeDamageInvulnerability()
     {
+        sprite.enabled = false;
         isInvulnerable = true;
 
-        float time = 0f;
-        while (time < invulnerabilitySeconds)
+        float visibilityDuration = .1f;
+        int repetitions = Mathf.FloorToInt(invulnerabilitySeconds / visibilityDuration);
+        for (int i = 0; i < repetitions; i++)
         {
-            time += Time.deltaTime;
-            yield return null;
+            yield return new WaitForSeconds(visibilityDuration);
+
+            sprite.enabled = !sprite.enabled;
         }
 
+        sprite.enabled = true;
         isInvulnerable = false;
     }
 
