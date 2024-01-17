@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     private static Player instance;
     public static int layer = 8;
-    public static Vector2 Position { get { return instance.rb.position; } }
+    public static Vector3 Position { get { return (Vector3)instance.rb.position; } }
 
     private bool IsDead { get { return health <= 0; } }
 

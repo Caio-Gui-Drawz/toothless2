@@ -7,18 +7,18 @@ public class Enemy : MonoBehaviour
 {
     public static int layer = 9;
 
-    [SerializeField] private float healthMax;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float moveAcceleration;
-    private float health;
+    [SerializeField] protected float healthMax;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected float moveAcceleration;
+    protected float health;
 
-    private Seeker seeker;
-    private AIPath aiPath;
+    protected Seeker seeker;
+    protected AIPath aiPath;
     
 
 
     // UNITY
-    private void Awake()
+    protected virtual void Awake()
     {
         seeker = GetComponent<Seeker>();
         aiPath = GetComponent<AIPath>();
@@ -28,7 +28,12 @@ public class Enemy : MonoBehaviour
         health = healthMax;
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
+    {
+        Move();
+    }
+
+    protected virtual void Move()
     {
         aiPath.destination = Player.Position;
     }
