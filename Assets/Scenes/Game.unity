@@ -506,6 +506,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 166662833031324094, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166662833031324094, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
+      propertyPath: shootDelayMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 166662833031324094, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
+      propertyPath: shootDelayMin
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 166662833031324227, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -569,7 +581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6006445709268396289, guid: 53233dab2958e584698803bf9df29c11, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6006445709268396318, guid: 53233dab2958e584698803bf9df29c11, type: 3}
       propertyPath: m_RootOrder

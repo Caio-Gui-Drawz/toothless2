@@ -56,7 +56,7 @@ MonoBehaviour:
   shootDelayMin: 1
   shootDelayMax: 2
   bulletPrefab: {fileID: 2476677419957301472, guid: dbb2928f80c29b246867090d2216c2b4, type: 3}
-  bulletPoint: {fileID: 0}
+  bulletPoint: {fileID: 166662833031324227}
   bulletSpeed: 5
   bulletLifetime: 3
 --- !u!114 &166662833031324253
