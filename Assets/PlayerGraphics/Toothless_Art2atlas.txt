@@ -1,0 +1,111 @@
+
+Toothless_Art2.png
+size: 1098,396
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mary/Alicate_Prop
+  rotate: true
+  xy: 622, 159
+  size: 235, 179
+  orig: 237, 183
+  offset: 1, 2
+  index: -1
+Mary/Body
+  rotate: false
+  xy: 803, 170
+  size: 145, 224
+  orig: 145, 224
+  offset: 0, 0
+  index: -1
+Mary/L_Arm
+  rotate: true
+  xy: 774, 2
+  size: 155, 166
+  orig: 155, 166
+  offset: 0, 0
+  index: -1
+Mary/L_Leg
+  rotate: true
+  xy: 332, 29
+  size: 94, 179
+  orig: 94, 179
+  offset: 0, 0
+  index: -1
+Mary/R_Arm
+  rotate: true
+  xy: 950, 233
+  size: 161, 146
+  orig: 161, 146
+  offset: 0, 0
+  index: -1
+Mary/R_Leg
+  rotate: true
+  xy: 151, 14
+  size: 97, 179
+  orig: 97, 179
+  offset: 0, 0
+  index: -1
+Mary/back_hair
+  rotate: false
+  xy: 2, 113
+  size: 269, 281
+  orig: 269, 282
+  offset: 0, 0
+  index: -1
+Mary/head/Angry_Eye
+  rotate: false
+  xy: 2, 2
+  size: 147, 109
+  orig: 149, 111
+  offset: 1, 1
+  index: -1
+Mary/head/Default_Eye
+  rotate: false
+  xy: 950, 171
+  size: 131, 60
+  orig: 133, 62
+  offset: 1, 1
+  index: -1
+Mary/head/Dmg_Eye_
+  rotate: true
+  xy: 942, 5
+  size: 163, 69
+  orig: 165, 72
+  offset: 1, 1
+  index: -1
+Mary/head/franja1
+  rotate: false
+  xy: 273, 125
+  size: 145, 269
+  orig: 191, 295
+  offset: 30, 26
+  index: -1
+Mary/head/franja2
+  rotate: true
+  xy: 513, 6
+  size: 124, 259
+  orig: 270, 290
+  offset: 146, 31
+  index: -1
+Mary/head/main_head
+  rotate: false
+  xy: 420, 132
+  size: 200, 262
+  orig: 202, 264
+  offset: 1, 1
+  index: -1
+Mary/head/mouth1
+  rotate: false
+  xy: 151, 2
+  size: 48, 10
+  orig: 51, 12
+  offset: 2, 1
+  index: -1
+Mary/head/mouth2
+  rotate: true
+  xy: 1013, 81
+  size: 88, 56
+  orig: 90, 58
+  offset: 1, 1
+  index: -1
