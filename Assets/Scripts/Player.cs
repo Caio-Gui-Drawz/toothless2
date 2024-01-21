@@ -8,13 +8,16 @@ public class Player : MonoBehaviour
 {
     private static Player instance;
     public static int layer = 8;
-    public static Vector3 Position { get { return (Vector3)instance.rb.position; } }
 
+    public static Vector3 Position { get { return (Vector3)instance.rb.position; } }
     private bool IsDead { get { return health <= 0; } }
 
     [SerializeField] private int healthMax;
     [SerializeField] private float speedMax;
     [SerializeField] private float invulnerabilitySeconds;
+    [SerializeField] private float attackRange;
+    [SerializeField] private float attackRadius;
+
     private int health;
     private float speed;
     private bool isInvulnerable;
@@ -55,7 +58,8 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.layer == Enemy.layer)
         {
-            TakeDamage();
+            if (other.gameObject.TryGetComponent(out Enemy enemy))
+                if (!enemy.IsStaggered) TakeDamage();
         }
     }
 
@@ -117,7 +121,14 @@ public class Player : MonoBehaviour
 
     private void OnAttack(InputAction.CallbackContext context)
     {
+        Vector2 attackDirection = (Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - (Vector3)rb.position).normalized;
 
+        RaycastHit2D overlap = Physics2D.CircleCast(rb.position, attackRadius, attackDirection, attackRange, 1 << Enemy.layer);
+        if (overlap.rigidbody != null)
+        {
+            Debug.Log("Player attacked " + overlap.rigidbody.name);
+            if (overlap.rigidbody.TryGetComponent(out Enemy enemy)) enemy.TakeDamage();
+        }
     }
 
     private void OnInteract(InputAction.CallbackContext context)

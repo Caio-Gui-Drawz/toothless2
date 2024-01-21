@@ -10,10 +10,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float healthMax;
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float moveAcceleration;
+    [SerializeField] protected float staggerTime = .1f;
     protected float health;
+    public bool IsStaggered { get; protected set;}
 
     protected Seeker seeker;
     protected AIPath aiPath;
+    protected SpriteRenderer sprite;
+    protected Coroutine flashCoroutine;
+    protected Coroutine staggerCoroutine;
     
 
 
@@ -24,6 +29,7 @@ public class Enemy : MonoBehaviour
         aiPath = GetComponent<AIPath>();
         aiPath.maxAcceleration = moveAcceleration;
         aiPath.maxSpeed = moveSpeed;
+        sprite = GetComponentInChildren<SpriteRenderer>();
 
         health = healthMax;
     }
@@ -36,6 +42,42 @@ public class Enemy : MonoBehaviour
     protected virtual void Move()
     {
         aiPath.destination = Player.Position;
+    }
+
+    public virtual void TakeDamage()
+    {
+        health--;
+
+        if (health <= 0f) Death();
+        else
+        {
+            if (flashCoroutine != null) StopCoroutine(flashCoroutine);
+            flashCoroutine = StartCoroutine(TakeDamageFlash());
+
+            if (staggerCoroutine != null) StopCoroutine(staggerCoroutine);
+            staggerCoroutine = StartCoroutine(TakeDamageStagger());
+        }
+    }
+
+    private IEnumerator TakeDamageFlash()
+    {
+        sprite.enabled = false;
+        yield return new WaitForSeconds(.05f);
+        sprite.enabled = true;
+    }
+
+    private IEnumerator TakeDamageStagger()
+    {
+        aiPath.enabled = false;
+        IsStaggered = true;
+        yield return new WaitForSeconds(staggerTime);
+        aiPath.enabled = true;
+        IsStaggered = false;
+    }
+
+    protected virtual void Death()
+    {
+        gameObject.SetActive(false);
     }
 
     // TESTING

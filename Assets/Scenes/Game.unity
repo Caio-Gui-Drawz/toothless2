@@ -442,6 +442,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2113759426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6006445709268396289, guid: 53233dab2958e584698803bf9df29c11, type: 3}
+  m_PrefabInstance: {fileID: 6006445709330702351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &2113759433
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113759426}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1001 &386500367992176130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,6 +518,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 386500367578163986, guid: 9851a350ff585ee41ae3f7c76a69b191, type: 3}
+      propertyPath: attackRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 386500367578163986, guid: 9851a350ff585ee41ae3f7c76a69b191, type: 3}
+      propertyPath: attackRadius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9851a350ff585ee41ae3f7c76a69b191, type: 3}
 --- !u!1001 &5839819041148291006
@@ -509,6 +538,10 @@ PrefabInstance:
     - target: {fileID: 166662833031324094, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
       propertyPath: moveSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166662833031324094, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
+      propertyPath: staggerTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 166662833031324094, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
       propertyPath: shootDelayMax
@@ -566,6 +599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Ranged
       objectReference: {fileID: 0}
+    - target: {fileID: 166662833031324252, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20ba91ff12a6064e92c467735698b8a, type: 3}
 --- !u!1001 &6006445709330702351
@@ -581,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6006445709268396289, guid: 53233dab2958e584698803bf9df29c11, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6006445709268396318, guid: 53233dab2958e584698803bf9df29c11, type: 3}
       propertyPath: m_RootOrder
@@ -626,6 +663,10 @@ PrefabInstance:
     - target: {fileID: 6006445709268396318, guid: 53233dab2958e584698803bf9df29c11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006445709268396319, guid: 53233dab2958e584698803bf9df29c11, type: 3}
+      propertyPath: staggerTime
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53233dab2958e584698803bf9df29c11, type: 3}
