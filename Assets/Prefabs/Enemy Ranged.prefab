@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &166662833031324227
 Transform:
   m_ObjectHideFlags: 0
@@ -51,10 +51,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthMax: 3
-  moveSpeed: 1
+  moveSpeed: 0
   moveAcceleration: 5
-  shootDelayMin: 1
-  shootDelayMax: 2
+  staggerTime: 0.1
+  shootDelayMin: 5
+  shootDelayMax: 5
   bulletPrefab: {fileID: 2476677419957301472, guid: dbb2928f80c29b246867090d2216c2b4, type: 3}
   bulletPoint: {fileID: 166662833031324227}
   bulletSpeed: 5
