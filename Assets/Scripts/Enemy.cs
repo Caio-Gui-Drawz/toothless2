@@ -9,11 +9,12 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] protected float healthMax;
     [SerializeField] protected float moveSpeed;
-    [SerializeField] protected float moveAcceleration;
+    [SerializeField] protected float moveAcceleration = 3f;
     [SerializeField] protected float staggerTime = .1f;
     protected float health;
     public bool IsStaggered { get; protected set;}
 
+    protected Rigidbody2D rb;
     protected Seeker seeker;
     protected AIPath aiPath;
     protected SpriteRenderer sprite;
@@ -25,13 +26,12 @@ public class Enemy : MonoBehaviour
     // UNITY
     protected virtual void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
         aiPath = GetComponent<AIPath>();
-        aiPath.maxAcceleration = moveAcceleration;
-        aiPath.maxSpeed = moveSpeed;
         sprite = GetComponentInChildren<SpriteRenderer>();
 
-        health = healthMax;
+        Spawn(); // TESTING
     }
 
     protected virtual void FixedUpdate()
@@ -42,6 +42,13 @@ public class Enemy : MonoBehaviour
     protected virtual void Move()
     {
         aiPath.destination = Player.Position;
+    }
+
+    protected virtual void Spawn()
+    {
+        health = healthMax;
+        aiPath.maxAcceleration = moveAcceleration;
+        aiPath.maxSpeed = moveSpeed;
     }
 
     public virtual void TakeDamage()
@@ -68,6 +75,8 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator TakeDamageStagger()
     {
+        if (staggerTime < 0f) yield break;
+
         aiPath.enabled = false;
         IsStaggered = true;
         yield return new WaitForSeconds(staggerTime);
