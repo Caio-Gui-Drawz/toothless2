@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
   m_Name: Toothless_Art2_SkeletonData
   m_EditorClassIdentifier: 
-  atlasAssets: []
+  atlasAssets:
+  - {fileID: 11400000, guid: 0283c522048241f46a72051d0e4e9c18, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: c7413429280276840806be171a52338f, type: 3}
   isUpgradingBlendModeMaterials: 0
@@ -27,4 +28,4 @@ MonoBehaviour:
   toAnimation: []
   duration: []
   defaultMix: 0.2
-  controller: {fileID: 0}
+  controller: {fileID: 9100000, guid: 020dbfb24c544d4469a5a6a44784ca3d, type: 2}

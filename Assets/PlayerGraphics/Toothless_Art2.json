@@ -1,7 +1,7 @@
 {
 "skeleton": {
-	"hash": "S+oSotGUfcWIxgLMkwsrI2OdXMg",
-	"spine": "3.8.75",
+	"hash": "ebsVpK5LtYJYs/+33hDuiz9y0AQ",
+	"spine": "3.8.0",
 	"x": -153.14,
 	"y": -6.2,
 	"width": 450.76,
@@ -507,14 +507,14 @@
 	},
 	"Anim_Mary_Run": {
 		"slots": {
-			"R_Leg": {
-				"color": [
-					{ "color": "abababff" }
-				]
-			},
 			"R_Arm": {
 				"color": [
 					{ "color": "b0b0b0ff" }
+				]
+			},
+			"R_Leg": {
+				"color": [
+					{ "color": "abababff" }
 				]
 			}
 		},

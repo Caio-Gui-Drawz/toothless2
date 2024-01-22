@@ -1,0 +1,55 @@
+
+Toothless_enemies.png
+size: 1022,686
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Basic_Enemy/Body1
+  rotate: false
+  xy: 412, 290
+  size: 374, 394
+  orig: 376, 396
+  offset: 1, 1
+  index: -1
+Basic_Enemy/mouths/Mouth_Down
+  rotate: true
+  xy: 775, 20
+  size: 268, 245
+  orig: 268, 245
+  offset: 0, 0
+  index: -1
+Basic_Enemy/mouths/Mouth_Top
+  rotate: true
+  xy: 788, 407
+  size: 277, 203
+  orig: 279, 205
+  offset: 1, 1
+  index: -1
+Basic_Enemy/scar
+  rotate: false
+  xy: 788, 314
+  size: 120, 91
+  orig: 174, 102
+  offset: 53, 2
+  index: -1
+Basic_Enemy/wings/Wing1.2
+  rotate: false
+  xy: 2, 2
+  size: 361, 396
+  orig: 363, 398
+  offset: 1, 1
+  index: -1
+Basic_Enemy/wings/Wing2.1
+  rotate: false
+  xy: 2, 400
+  size: 408, 284
+  orig: 411, 286
+  offset: 1, 1
+  index: -1
+Basic_Enemy/wings/Wing2.2
+  rotate: false
+  xy: 365, 4
+  size: 408, 284
+  orig: 411, 286
+  offset: 2, 1
+  index: -1

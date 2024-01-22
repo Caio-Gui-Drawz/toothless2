@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
   m_Name: Toothless_enemies_SkeletonData
   m_EditorClassIdentifier: 
-  atlasAssets: []
+  atlasAssets:
+  - {fileID: 11400000, guid: d051344ea708f774dba1e87203864757, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: 2d04e8b4612f51f4cb5fa090adeadbbe, type: 3}
   isUpgradingBlendModeMaterials: 0
