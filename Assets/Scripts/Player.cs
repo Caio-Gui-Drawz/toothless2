@@ -116,6 +116,7 @@ public class Player : MonoBehaviour
         if (moveDirection != Vector2.zero)
         {
             rb.position += speed * Time.fixedDeltaTime * moveDirection;
+            Camera.main.transform.position = rb.position;
         }
     }
 
