@@ -1,0 +1,159 @@
+{
+"skeleton": {
+	"hash": "trOGPeyan9mRym+LHXeuIfZffJk",
+	"spine": "3.8.0",
+	"x": -491.61,
+	"y": 202.53,
+	"width": 980.76,
+	"height": 518.79,
+	"images": "./images/",
+	"audio": "D:/caio_backup_05_2023/PROJECTZ/TOOTHLESS 2/inimigos_Spine"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Body1", "parent": "root", "rotation": 89.04, "x": -0.86, "y": 339.64 },
+	{ "name": "Mouth_Top", "parent": "Body1", "x": 76.38, "y": 0.41 },
+	{ "name": "Mouth_Down2", "parent": "Body1", "x": 109.99, "y": -8.84 },
+	{
+		"name": "Mouth_Down",
+		"parent": "Mouth_Down2",
+		"length": 219.24,
+		"rotation": -179.04,
+		"x": -8.71,
+		"y": -1.59,
+		"scaleX": 1.0217,
+		"scaleY": 1.0217
+	},
+	{ "name": "Wing2.2", "parent": "Body1", "length": 344.62, "rotation": -53.52, "x": 107.91, "y": -77.44 },
+	{ "name": "Wing2.1", "parent": "Body1", "length": 323.59, "rotation": 51.47, "x": 93.99, "y": 96.15 }
+],
+"slots": [
+	{ "name": "Wing1.1", "bone": "root", "attachment": "wings/Wing1.1" },
+	{ "name": "Wing1.2", "bone": "root", "attachment": "wings/Wing1.2" },
+	{ "name": "Wing2.1", "bone": "Wing2.1", "attachment": "wings/Wing2.1" },
+	{ "name": "Wing2.2", "bone": "Wing2.2", "attachment": "wings/Wing2.2" },
+	{ "name": "Wing3.1", "bone": "root", "attachment": "wings/Wing3.1" },
+	{ "name": "Wing3.2", "bone": "root", "attachment": "wings/Wing3.2" },
+	{ "name": "Wing4.1", "bone": "root", "attachment": "wings/Wing4.1" },
+	{ "name": "Wing4.2", "bone": "root", "attachment": "wings/Wing4.2" },
+	{ "name": "Body1", "bone": "Body1", "attachment": "Body1" },
+	{ "name": "tromba", "bone": "root", "attachment": "tromba" },
+	{ "name": "Mouth_Down", "bone": "Mouth_Down2", "attachment": "mouths/Mouth_Down" },
+	{ "name": "Mouth_Top", "bone": "Mouth_Top", "attachment": "mouths/Mouth_Top" },
+	{ "name": "eye", "bone": "root", "attachment": "eye" },
+	{ "name": "scar", "bone": "Body1", "attachment": "scar" }
+],
+"skins": [
+	{
+		"name": "Basic_Enemy",
+		"attachments": {
+			"scar": {
+				"scar": { "name": "Basic_Enemy/scar", "x": 165.4, "y": 17.11, "rotation": -62.11, "width": 174, "height": 102 }
+			},
+			"Wing3.1": {
+				"wings/Wing3.1": { "name": "Basic_Enemy/wings/Wing3.1", "x": -349, "y": 456, "width": 448, "height": 398 }
+			},
+			"Wing2.1": {
+				"wings/Wing2.1": { "name": "Basic_Enemy/wings/Wing2.1", "x": 196.88, "y": 26.54, "rotation": -150.6, "width": 411, "height": 286 }
+			},
+			"Mouth_Down": {
+				"mouths/Mouth_Down": {
+					"name": "Basic_Enemy/mouths/Mouth_Down",
+					"type": "mesh",
+					"uvs": [ 0.28677, 0.01232, 0.21605, 0.05199, 0.09999, 0.15117, 0.03833, 0.20473, 0, 0.29598, 0, 0.35549, 0, 0.39516, 1.0E-5, 0.45758, 0.00586, 0.53343, 1.0E-5, 0.63767, 0.00206, 0.72445, 0.05647, 0.81967, 0.16709, 0.91885, 0.49169, 1, 0.45361, 1, 0.66034, 1, 0.8308, 0.94861, 0.94868, 0.7919, 0.99999, 0.65156, 0.99999, 0.55587, 0.99999, 0.4637, 1, 0.34557, 1, 0.28408, 1, 0.18291, 0.97588, 0.12142, 0.90334, 0.04207, 0.85075, 0.00636, 0.80541, 0, 0.52252, 0, 0.35387, 0, 0.49302, 0.52329, 0.49392, 0.46917, 0.49381, 0.58994 ],
+					"triangles": [ 24, 23, 22, 25, 24, 22, 5, 4, 3, 2, 6, 5, 2, 7, 6, 21, 25, 22, 31, 29, 28, 0, 29, 31, 1, 0, 31, 2, 1, 31, 3, 2, 5, 31, 7, 2, 31, 28, 27, 31, 27, 21, 25, 27, 26, 25, 21, 27, 20, 31, 21, 31, 8, 7, 30, 8, 31, 30, 31, 20, 19, 30, 20, 32, 30, 19, 8, 30, 32, 9, 8, 32, 32, 19, 18, 11, 10, 9, 17, 32, 18, 32, 11, 9, 12, 11, 32, 16, 32, 17, 32, 13, 12, 32, 15, 13, 16, 15, 32 ],
+					"vertices": [ 1, 3, -0.93, 73.61, 1, 1, 3, -11.19, 92.81, 1, 1, 3, -36.55, 124.17, 1, 1, 3, -50.24, 140.82, 1, 1, 3, -73.25, 150.93, 1, 1, 3, -88.15, 150.68, 1, 1, 3, -98.08, 150.51, 1, 1, 3, -113.7, 150.25, 1, 1, 4, 118.82, -148.75, 1, 1, 4, 144.36, -150.32, 1, 1, 4, 165.62, -149.76, 1, 1, 4, 188.95, -135.18, 1, 1, 4, 213.25, -105.54, 1, 1, 4, 233.13, -18.54, 1, 1, 4, 233.13, -28.75, 1, 1, 4, 233.13, 26.65, 1, 1, 4, 220.54, 72.34, 1, 1, 4, 182.15, 103.93, 1, 1, 4, 147.76, 117.68, 1, 1, 4, 124.32, 117.68, 1, 1, 3, -110.62, -123.56, 1, 1, 3, -81.06, -123.06, 1, 1, 3, -65.67, -122.8, 1, 1, 3, -40.34, -122.38, 1, 1, 3, -25.06, -115.51, 1, 1, 3, -5.54, -95.32, 1, 1, 3, 3.16, -80.77, 1, 1, 3, 4.54, -68.33, 1, 1, 3, 3.24, 9.12, 1, 1, 3, 2.46, 55.29, 1, 1, 4, 116.34, -18.19, 1, 1, 4, 103.08, -17.95, 1, 1, 4, 132.67, -17.98, 1 ],
+					"hull": 30,
+					"edges": [ 0, 2, 2, 4, 4, 6, 6, 8, 8, 10, 10, 12, 12, 14, 14, 16, 16, 18, 20, 22, 22, 24, 24, 26, 26, 28, 28, 30, 30, 32, 32, 34, 36, 38, 38, 40, 40, 42, 42, 44, 44, 46, 46, 48, 48, 50, 50, 52, 52, 54, 0, 58, 16, 60, 60, 38, 54, 56, 56, 58, 62, 60, 14, 62, 62, 40, 26, 64, 64, 60, 18, 64, 64, 36, 18, 20, 34, 36 ],
+					"width": 268,
+					"height": 245
+				}
+			},
+			"tromba": {
+				"tromba": { "name": "Basic_Enemy/tromba", "y": 419, "width": 134, "height": 292 }
+			},
+			"Mouth_Top": {
+				"mouths/Mouth_Top": { "name": "Basic_Enemy/mouths/Mouth_Top", "x": -59.7, "y": 2.1, "rotation": -89.04, "width": 279, "height": 205 }
+			},
+			"Wing1.1": {
+				"wings/Wing1.1": { "name": "Basic_Enemy/wings/Wing1.1", "x": -274.5, "y": 487, "width": 363, "height": 398 }
+			},
+			"Wing1.2": {
+				"wings/Wing1.2": { "name": "Basic_Enemy/wings/Wing1.2", "x": 282.5, "y": 487, "width": 363, "height": 398 }
+			},
+			"Wing2.2": {
+				"wings/Wing2.2": { "name": "Basic_Enemy/wings/Wing2.2", "x": 211.58, "y": -24.26, "rotation": -26.98, "width": 411, "height": 286 }
+			},
+			"Wing3.2": {
+				"wings/Wing3.2": { "name": "Basic_Enemy/wings/Wing3.2", "x": 311.5, "y": 463.5, "width": 471, "height": 369 }
+			},
+			"Wing4.2": {
+				"wings/Wing4.2": { "name": "Basic_Enemy/wings/Wing4.2", "x": -216, "y": 407.5, "width": 238, "height": 381 }
+			},
+			"Body1": {
+				"Body1": {
+					"name": "Basic_Enemy/Body1",
+					"x": 53.73,
+					"y": 6.53,
+					"scaleX": 0.954,
+					"scaleY": 0.954,
+					"rotation": -89.04,
+					"width": 376,
+					"height": 396
+				}
+			},
+			"eye": {
+				"eye": { "name": "Basic_Enemy/eye", "x": 7, "y": 163, "width": 192, "height": 212 }
+			},
+			"Wing4.1": {
+				"wings/Wing4.1": { "name": "Basic_Enemy/wings/Wing4.1", "x": 213, "y": 409.5, "width": 238, "height": 381 }
+			}
+		}
+	}
+],
+"animations": {
+	"Enemy_Idle": {
+		"bones": {
+			"Body1": {
+				"translate": [
+					{},
+					{ "time": 0.6667, "y": -71.85 },
+					{ "time": 1.3333 }
+				]
+			},
+			"Wing2.2": {
+				"rotate": [
+					{ "angle": 10.59 },
+					{ "time": 0.3333, "angle": -39.34 },
+					{ "time": 0.6667, "angle": 10.59 },
+					{ "time": 1, "angle": -39.34 },
+					{ "time": 1.3333, "angle": 10.59 }
+				]
+			},
+			"Wing2.1": {
+				"rotate": [
+					{ "angle": -17.72 },
+					{ "time": 0.3333, "angle": 39.97 },
+					{ "time": 0.6667, "angle": -17.72 },
+					{ "time": 1, "angle": 39.97 },
+					{ "time": 1.3333, "angle": -17.72 }
+				]
+			},
+			"Mouth_Down": {
+				"translate": [
+					{ "x": 33.64, "y": 0.57 },
+					{ "time": 0.1667, "x": -57.93, "y": -0.97 },
+					{ "time": 0.3333, "x": 33.64, "y": 0.57 },
+					{ "time": 0.5, "x": -57.93, "y": -0.97 },
+					{ "time": 0.6667, "x": 33.64, "y": 0.57 },
+					{ "time": 0.8333, "x": -57.93, "y": -0.97 },
+					{ "time": 1, "x": 33.64, "y": 0.57 },
+					{ "time": 1.1667, "x": -57.93, "y": -0.97 },
+					{ "time": 1.3333, "x": 33.64, "y": 0.57 }
+				]
+			}
+		}
+	},
+	"animation": {}
+}
+}
